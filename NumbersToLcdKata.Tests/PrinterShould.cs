@@ -1,5 +1,4 @@
-﻿using System;
-using FluentAssertions;
+﻿using FluentAssertions;
 using NUnit.Framework;
 
 namespace NumbersToLcdKata.Tests
@@ -17,9 +16,10 @@ namespace NumbersToLcdKata.Tests
         [TestCase(8, " _ \n|_|\n|_|")]
         [TestCase(9, " _ \n|_|\n _|")]
         [TestCase(0, " _ \n| |\n|_|")]
-        public void ReturnExpectedResultInLcdText_WhenConvertToLcdCalledWithSingleDigitNumber(int singleDigitNumber, string expectedResult)
+        public void ReturnExpectedResultInLcdText_WhenConvertToLcdCalledWithSingleDigitNumber(int singleDigitNumber,
+            string expectedResult)
         {
-            var result = LcdNumber.ConvertToLcd(singleDigitNumber);
+            var result = Printer.ConvertToLcd(singleDigitNumber);
 
             result.Should().Be(expectedResult);
         }
@@ -28,9 +28,11 @@ namespace NumbersToLcdKata.Tests
         [TestCase(11, "    \n | |\n | |")]
         [TestCase(12, "   _ \n | _|\n ||_ ")]
         [TestCase(20, " _  _ \n _|| |\n|_ |_|")]
-        public void ReturnExpectedResultInLcdText_WhenConvertToLcdCalledWithMultipleDigitNumber(int multipleDigitNumber, string expectedResult)
+        [TestCase(1234567890, "   _  _     _  _  _  _  _  _ \n | _| _||_||_ |_   ||_||_|| |\n ||_  _|  | _||_|  ||_| _||_|")]
+        public void ReturnExpectedResultInLcdText_WhenConvertToLcdCalledWithMultipleDigitNumber(int multipleDigitNumber,
+            string expectedResult)
         {
-            var result = LcdNumber.ConvertToLcd(multipleDigitNumber);
+            var result = Printer.ConvertToLcd(multipleDigitNumber);
 
             result.Should().Be(expectedResult);
         }
