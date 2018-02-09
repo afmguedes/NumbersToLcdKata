@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace NumbersToLcdKata
 {
@@ -6,7 +7,9 @@ namespace NumbersToLcdKata
     {
         public static string ConvertToLcd(int number)
         {
-            var lcdText = new[]
+            const char newLine = '\n';
+
+            var lcdTextSingleDigit = new[]
             {
                 " _ \n| |\n|_|",
                 "  \n |\n |",
@@ -20,28 +23,24 @@ namespace NumbersToLcdKata
                 " _ \n|_|\n _|"
             };
 
-            var numberText = number.ToString();
+            var lcdTextToPrint = string.Empty;
+            var inputText = number.ToString();
 
-            var result = string.Empty;
-            var lcdTextForAllDigits = new List<string[]>();
-
-            foreach (var digitChar in numberText)
-            {
-                var digit = int.Parse($"{digitChar}");
-                var digitLcdText = lcdText[digit].Split('\n');
-                lcdTextForAllDigits.Add(digitLcdText);
-            }
+            var lcdTextForAllDigits = inputText
+                .Select(digitChar => (int) char.GetNumericValue(digitChar))
+                .Select(digit => lcdTextSingleDigit[digit].Split(newLine))
+                .ToList();
 
             for (var line = 0; line < 3; line++)
             {
-                for (var digitIndex = 0; digitIndex < numberText.Length; digitIndex++)
-                    result += lcdTextForAllDigits[digitIndex][line];
+                for (var digitIndex = 0; digitIndex < inputText.Length; digitIndex++)
+                    lcdTextToPrint += lcdTextForAllDigits[digitIndex][line];
 
                 if (line != 2)
-                    result += "\n";
+                    lcdTextToPrint += newLine;
             }
 
-            return result;
+            return lcdTextToPrint;
         }
     }
 }

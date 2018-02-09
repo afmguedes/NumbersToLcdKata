@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumbersToLcdKata", "Numbers
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersToLcdKata.Tests", "NumbersToLcdKata.Tests\NumbersToLcdKata.Tests.csproj", "{F6E8B786-D0D2-4A2E-A752-E020B91910BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersToLcdKata.ConsoleApp", "NumbersToLcdKata.ConsoleApp\NumbersToLcdKata.ConsoleApp.csproj", "{4239A5CE-C1C7-4536-A908-01FD2E6EF63F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F6E8B786-D0D2-4A2E-A752-E020B91910BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6E8B786-D0D2-4A2E-A752-E020B91910BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6E8B786-D0D2-4A2E-A752-E020B91910BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4239A5CE-C1C7-4536-A908-01FD2E6EF63F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4239A5CE-C1C7-4536-A908-01FD2E6EF63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4239A5CE-C1C7-4536-A908-01FD2E6EF63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4239A5CE-C1C7-4536-A908-01FD2E6EF63F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

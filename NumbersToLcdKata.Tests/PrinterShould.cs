@@ -19,9 +19,9 @@ namespace NumbersToLcdKata.Tests
         public void ReturnExpectedResultInLcdText_WhenConvertToLcdCalledWithSingleDigitNumber(int singleDigitNumber,
             string expectedResult)
         {
-            var result = Printer.ConvertToLcd(singleDigitNumber);
+            var actual = Printer.ConvertToLcd(singleDigitNumber);
 
-            result.Should().Be(expectedResult);
+            actual.Should().Be(expectedResult);
         }
 
         [TestCase(10, "   _ \n || |\n ||_|")]
@@ -32,9 +32,9 @@ namespace NumbersToLcdKata.Tests
         public void ReturnExpectedResultInLcdText_WhenConvertToLcdCalledWithMultipleDigitNumber(int multipleDigitNumber,
             string expectedResult)
         {
-            var result = Printer.ConvertToLcd(multipleDigitNumber);
+            var actual = Printer.ConvertToLcd(multipleDigitNumber);
 
-            result.Should().Be(expectedResult);
+            actual.Should().Be(expectedResult);
         }
     }
 }
