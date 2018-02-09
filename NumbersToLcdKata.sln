@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NumbersToLcdKata", "NumbersToLcdKata\NumbersToLcdKata.csproj", "{E3989BA0-AFA6-426A-BEF7-FCAD9A5DDEEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersToLcdKata.Tests", "NumbersToLcdKata.Tests\NumbersToLcdKata.Tests.csproj", "{F6E8B786-D0D2-4A2E-A752-E020B91910BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3989BA0-AFA6-426A-BEF7-FCAD9A5DDEEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3989BA0-AFA6-426A-BEF7-FCAD9A5DDEEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3989BA0-AFA6-426A-BEF7-FCAD9A5DDEEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3989BA0-AFA6-426A-BEF7-FCAD9A5DDEEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6E8B786-D0D2-4A2E-A752-E020B91910BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6E8B786-D0D2-4A2E-A752-E020B91910BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6E8B786-D0D2-4A2E-A752-E020B91910BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6E8B786-D0D2-4A2E-A752-E020B91910BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDB888C4-F4A2-4D12-A1F3-4A414B576031}
+	EndGlobalSection
+EndGlobal
