@@ -9,7 +9,7 @@ namespace NumbersToLcdKata.ConsoleApp
         {
             while (int.TryParse(Console.ReadLine(), out var number))
             {
-                var lcdText = Printer.ConvertToLcd(number);
+                var lcdText = LcdDisplay.Print(number);
                 Console.WriteLine(lcdText);
             }
         }

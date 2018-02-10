@@ -16,10 +16,10 @@ namespace NumbersToLcdKata.Tests
         [TestCase(8, " _ \n|_|\n|_|")]
         [TestCase(9, " _ \n|_|\n _|")]
         [TestCase(0, " _ \n| |\n|_|")]
-        public void ReturnExpectedResultInLcdText_WhenConvertToLcdCalledWithSingleDigitNumber(int singleDigitNumber,
+        public void ReturnExpectedResultInLcdText_WhenPrintCalledWithSingleDigitNumber(int singleDigitNumber,
             string expectedResult)
         {
-            var actual = Printer.ConvertToLcd(singleDigitNumber);
+            var actual = LcdDisplay.Print(singleDigitNumber);
 
             actual.Should().Be(expectedResult);
         }
@@ -28,11 +28,12 @@ namespace NumbersToLcdKata.Tests
         [TestCase(11, "    \n | |\n | |")]
         [TestCase(12, "   _ \n | _|\n ||_ ")]
         [TestCase(20, " _  _ \n _|| |\n|_ |_|")]
-        [TestCase(1234567890, "   _  _     _  _  _  _  _  _ \n | _| _||_||_ |_   ||_||_|| |\n ||_  _|  | _||_|  ||_| _||_|")]
-        public void ReturnExpectedResultInLcdText_WhenConvertToLcdCalledWithMultipleDigitNumber(int multipleDigitNumber,
+        [TestCase(1234567890,
+            "   _  _     _  _  _  _  _  _ \n | _| _||_||_ |_   ||_||_|| |\n ||_  _|  | _||_|  ||_| _||_|")]
+        public void ReturnExpectedResultInLcdText_WhenPrintCalledWithMultipleDigitNumber(int multipleDigitNumber,
             string expectedResult)
         {
-            var actual = Printer.ConvertToLcd(multipleDigitNumber);
+            var actual = LcdDisplay.Print(multipleDigitNumber);
 
             actual.Should().Be(expectedResult);
         }
