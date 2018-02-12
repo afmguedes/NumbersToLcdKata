@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace NumbersToLcdKata.Tests
 {
     [TestFixture]
-    public class PrinterShould
+    public class LcdDisplayShould
     {
         [TestCase(1, "  \n |\n |")]
         [TestCase(2, " _ \n _|\n|_ ")]
