@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 
 namespace NumbersToLcdKata
 {
@@ -14,7 +13,8 @@ namespace NumbersToLcdKata
 
         public static string PrintCustomSize(int number, int width, int height)
         {
-            var numberCustomDigits = number.ToString().Select(c => DisplayCustomDigit.CustomDigits[(int)char.GetNumericValue(c)]);
+            var numberCustomDigits = number.ToString()
+                .Select(c => DisplayCustomDigit.CustomDigits[(int) char.GetNumericValue(c)]);
 
             return DisplayCustomDigit.PrintDigits(numberCustomDigits, width, height);
         }

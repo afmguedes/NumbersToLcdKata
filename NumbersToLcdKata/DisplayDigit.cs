@@ -1,22 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace NumbersToLcdKata
 {
     public class DisplayDigit
     {
-        public string LineOneOutput { get; }
-        public string LineTwoOutput { get; }
-        public string LineThreeOutput { get; }
-
-        private DisplayDigit(string lineOneOutput, string lineTwoOutput, string lineThreeOutput)
-        {
-            LineOneOutput = lineOneOutput;
-            LineTwoOutput = lineTwoOutput;
-            LineThreeOutput = lineThreeOutput;
-        }
+        private const char NewLine = '\n';
 
         public static DisplayDigit Zero = new DisplayDigit(" _ ", "| |", "|_|");
         public static DisplayDigit One = new DisplayDigit("  ", " |", " |");
@@ -29,21 +19,30 @@ namespace NumbersToLcdKata
         public static DisplayDigit Eight = new DisplayDigit(" _ ", "|_|", "|_|");
         public static DisplayDigit Nine = new DisplayDigit(" _ ", "|_|", " _|");
 
-        private const char NewLine = '\n';
-
-        public static Dictionary<int, DisplayDigit> Digits = new Dictionary<int, DisplayDigit>()
+        public static Dictionary<int, DisplayDigit> Digits = new Dictionary<int, DisplayDigit>
         {
-            { 0, Zero },
-            { 1, One },
-            { 2, Two },
-            { 3, Three },
-            { 4, Four },
-            { 5, Five },
-            { 6, Six },
-            { 7, Seven },
-            { 8, Eight },
-            { 9, Nine },
+            {0, Zero},
+            {1, One},
+            {2, Two},
+            {3, Three},
+            {4, Four},
+            {5, Five},
+            {6, Six},
+            {7, Seven},
+            {8, Eight},
+            {9, Nine}
         };
+
+        private DisplayDigit(string lineOneOutput, string lineTwoOutput, string lineThreeOutput)
+        {
+            LineOneOutput = lineOneOutput;
+            LineTwoOutput = lineTwoOutput;
+            LineThreeOutput = lineThreeOutput;
+        }
+
+        public string LineOneOutput { get; }
+        public string LineTwoOutput { get; }
+        public string LineThreeOutput { get; }
 
         public static string PrintDigits(IEnumerable<DisplayDigit> digits)
         {

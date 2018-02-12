@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Globalization;
-using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 
 namespace NumbersToLcdKata.ConsoleApp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             const string standardModePattern = "print -s \\d+";
             const string customModePattern = "print -c \\d+ \\d+ \\d+";
@@ -23,11 +21,12 @@ namespace NumbersToLcdKata.ConsoleApp
                     EnterStandardMode(command);
                 else if (Regex.IsMatch(command, customModePattern))
                     EnterCustomMode(command);
-
-                Console.WriteLine("Invalid command");
-                ShowHelp();
+                else
+                {
+                    Console.WriteLine("Invalid command");
+                    ShowHelp();
+                }
             }
-            
         }
 
         private static void EnterStandardMode(string command)

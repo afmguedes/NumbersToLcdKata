@@ -6,20 +6,7 @@ namespace NumbersToLcdKata
 {
     public class DisplayCustomDigit
     {
-        public string TopLine { get; }
-        public string TopHalf { get; }
-        public string MidLine { get; }
-        public string BtmHalf { get; }
-        public string BtmLine { get; }
-
-        private DisplayCustomDigit(string topLine, string topHalf, string midLine, string btmHalf, string btmLine)
-        {
-            TopLine = topLine;
-            TopHalf = topHalf;
-            MidLine = midLine;
-            BtmHalf = btmHalf;
-            BtmLine = btmLine;
-        }
+        private const char NewLine = '\n';
 
         public static DisplayCustomDigit Zero = new DisplayCustomDigit(" _ ", "| |", "| |", "| |", " _ ");
         public static DisplayCustomDigit One = new DisplayCustomDigit("   ", "  |", "  |", "  |", "  |");
@@ -31,8 +18,6 @@ namespace NumbersToLcdKata
         public static DisplayCustomDigit Seven = new DisplayCustomDigit(" _ ", "  |", "  |", "  |", "  |");
         public static DisplayCustomDigit Eight = new DisplayCustomDigit(" _ ", "| |", " _ ", "| |", " _ ");
         public static DisplayCustomDigit Nine = new DisplayCustomDigit(" _ ", "| |", " _ ", "  |", " _ ");
-
-        private const char NewLine = '\n';
 
         public static Dictionary<int, DisplayCustomDigit> CustomDigits = new Dictionary<int, DisplayCustomDigit>
         {
@@ -47,6 +32,21 @@ namespace NumbersToLcdKata
             {8, Eight},
             {9, Nine}
         };
+
+        private DisplayCustomDigit(string topLine, string topHalf, string midLine, string btmHalf, string btmLine)
+        {
+            TopLine = topLine;
+            TopHalf = topHalf;
+            MidLine = midLine;
+            BtmHalf = btmHalf;
+            BtmLine = btmLine;
+        }
+
+        public string TopLine { get; }
+        public string TopHalf { get; }
+        public string MidLine { get; }
+        public string BtmHalf { get; }
+        public string BtmLine { get; }
 
         public static string PrintDigits(IEnumerable<DisplayCustomDigit> digits, int width, int height)
         {
