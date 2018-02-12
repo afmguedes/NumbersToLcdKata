@@ -1,7 +1,5 @@
 ## Goal: write a program that displays LCD style numbers.
 
-``` Current status of the code is: Part 1 Complete ```
-
 ### Part 1
 
 Write a program that given a number (with arbitrary number of digits), converts it into LCD style numbers using the following format:
